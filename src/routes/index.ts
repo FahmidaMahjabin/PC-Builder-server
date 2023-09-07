@@ -1,11 +1,11 @@
 import express from 'express'
-import bookRoute from '../module/book/book.route'
+import productRoute from '../module/product/product.route'
 
 // import { AcademicFaculty } from '../module/academicFaculty/academicFaculty.model'
 
 const routes = express.Router()
 
-const appRoutes = [{ path: '/book', route: bookRoute }]
+const appRoutes = [{ path: '/product', route: productRoute }]
 
 appRoutes.forEach(route => routes.use(route.path, route.route))
 
