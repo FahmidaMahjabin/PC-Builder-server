@@ -12,7 +12,7 @@ router.post(
 
 router.get('/all-products', productController.getAllproducts)
 router.get('/:category', productController.getCategorizedProduct)
-router.get('/:id', productController.getSingleproduct)
+router.get('/products/:id', productController.getSingleproduct)
 router.delete('/:id', productController.deleteproduct)
 router.patch(
   '/:id',

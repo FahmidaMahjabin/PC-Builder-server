@@ -86,9 +86,8 @@ const getAllproducts: RequestHandler = catchAsync(
 const getSingleproduct: RequestHandler = catchAsync(
   async (req: Request, res: Response, next: NextFunction) => {
     const { id } = await req.params
-    const result = await productServices.getSingleproduct(
-      id as unknown as ObjectId
-    )
+    console.log('id:', id)
+    const result = await productServices.getSingleproduct(id)
     sendResponse<Iproduct>(res, {
       statusCode: 200,
       success: true,

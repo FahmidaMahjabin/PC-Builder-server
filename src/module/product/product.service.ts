@@ -52,8 +52,8 @@ const getCategorizedProduct = async (category: string) => {
   const result = await product.find({ category: category })
   return result
 }
-const getSingleproduct = async (id: ObjectId) => {
-  const result = await product.findById(id)
+const getSingleproduct = async (id: string) => {
+  const result = await product.findOne({ id: Number(id) })
   return result
 }
 const updateproduct = async (id: ObjectId, updateData: Partial<Iproduct>) => {
